@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.contenedor {
+	background:#ccc;
+	width:70%;
+	max-width:2000px;
+	margin:auto;
+	display:flex;
+	flex-flow:row wrap;
+}
+
+header {
+	background:#6ad55e;
+	width:100%;
+	padding:20px;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	flex-flow:row wrap;
+}
+
+header .logo {
+	color:#fff;
+	font-size: clamp(2rem, 1vw, 1rem);
+}
+
+header .logo img {
+	width:50px;
+	vertical-align: top;
+}
+
+header .logo a {
+	color:#fff;
+	text-decoration: none;
+	line-height:50px;
+	font-size: clamp(.7rem, 1.5vw, 2rem);
+}
+
+header nav {
+	width:50%;
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+header nav a {
+	background:#064c23;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+	flex-grow:1;
+	font-size: clamp(.7rem, 1.5vw, 1rem);
+}
+
+.main {
+	background:#fff;
+	padding:20px;
+	flex:1 1 70%;
+	flex-wrap: no-wrap;
+}
+
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+	text-align: justify;
+	font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+
+aside {
+	background:#0a6640;
+	padding:5px;
+	display: flex;
+	flex:1 1 30%;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
+aside .widget {
+	display: flex;
+	background: #1ed771;
+	height:150px;
+	margin:10px;
+	justify-content: space-around;
+}
+
+.imagen{
+	width: 9rem;
+	align-items: center;
+}
+
+.footer {
+	background:#6ad55e;
+	width:70%;
+	max-width:2000px;
+	margin:auto;
+	display:flex;
+	flex-flow:row wrap;
+	padding: 20px;
+	justify-content: flex-start;
+}
+
+.links {
+	background:#064c23;
+	color:#fff;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.links a {
+	flex-grow:1;
+	color:#fff;
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	text-decoration:none;
+	font-size: clamp(.7rem, 1.5vw, 1rem);
+}
+
+@media screen and (max-width: 50em) {
+
+	.contenedor {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}
+}
+
+@media screen and (max-width: 37em) {
+
+	aside {
+		flex-direction:column;
+	}
+
+	.footer {
+		justify-content:space-between;
+	}
+
+	.links a {
+		flex-grow:1;
+		color:#fff;
+	}
+}
+
+@media (hover: hover){
+
+	header nav a:hover {
+		background:#cde5d5;
+	}
+
+	.links a:hover {
+		background:#cde5d5;
+	}
+
+}
+
+@media (prefers-color-scheme: dark){
+	body {
+		background-color: rgb(51, 51, 51);
+	}
+
+}
+
+
+
+  <section class="main">
+    <article>
+      <h2 class="titulo">Lorem ipsum dolor sit amet.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </article>
+  </section>
+  <aside>
+    <div class="widget">
+      <img class="imagen" src="src/Happy Apple.png" alt="">
+    </div>
+  </aside>
+
+
+
+
+.section__main {
+	display: flex;
+	flex-wrap: wrap;
+	background:#e5f2f8;
+
+	article {
+		flex:2;
+		text-align: start;
+		color: #08496a;
+
+		.parrafo {
+			padding-top: 5rem;
+			margin-left: 7rem;
+			font-size: clamp(3rem, 1.5vw, 4rem);
+		}
+		.subtitulo {
+			padding-top: 1rem;
+			margin-left: 7rem;
+			font-size: clamp(.5rem, 1.5vw, 1rem);
+		}
+	}
+	aside {
+		flex:1;
+		min-width: 250px;
+		padding:2px;
+	
+		.widget {
+			height:22rem;
+			margin:1rem;
+			justify-content:space-between;
+		}
+		.imagen{
+			width: 35rem;
+		}
+	}
+}
+
+.main {
+	background:#fff;
+	padding:20px;
+	flex:1 1 70%;
+	flex-wrap: no-wrap;
+}
+
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+	text-align: justify;
+	font-size: clamp(.8rem, 1.5vw, 1rem);
+}
+
+aside {
+	background:#0a6640;
+	padding:5px;
+	display: flex;
+	flex:1 1 30%;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
+aside .widget {
+	display: flex;
+	background: #1ed771;
+	height:150px;
+	margin:10px;
+	justify-content: space-around;
+}
+
+.imagen{
+	width: 9rem;
+	align-items: center;
+}
+
+
+
